@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--외부 스타일 방식-->
+    <link rel="stylesheet" href="basic.css">
+    <!-- 스타일은 인라인스타일이 우선이 됨 -->
+    <!-- 동일한 위치의 스타일은 내부 외부 중 우선순위는 없고 나중에 적용되는게 우선이 됨 -->
+    
+    <!--내부 스타일 방식 -->
+    <style>
+        h1 {
+            color: red;
+
+        }
+        h2{
+            color: green;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>CSS Basic 2</h1>
+    <!-- 인라인 스타일 방식 -->
+    <h2 style="color: blue;">CSS Basic 2</h2>
+
+    <h2>CSS Basic 2</h2>
+</body>
+</html>
