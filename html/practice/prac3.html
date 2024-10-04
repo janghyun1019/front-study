@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        고객명 : <input type="text"><br><br>
+        <label>전화번호 : <input type="tel"></label><br><br>
+        <lable for="input_email">Email : <input type="email" id="input_email"></lable><br><br>
+        피자선택 :
+        <select size="1"><!--콤보박스 생성-->
+            <option selected disabled>피자를 선택하세요</option>
+            <option>콤비네이션피자</option>
+            <option>단호박피자</option>
+            <option>치즈폭탄피자</option>   
+        </select>
+        <fieldset>
+            <legend>피자 사이즈</legend>
+            <label><input type="radio" name="pz_size"> Small</label><br><br>
+            <label><input type="radio" name="pz_size"> Medium</label><br><br>
+            <label for="rd_large"><input type="radio" name="pz_size" id="rd_large"> Large</label><br><br><!--선택-->
+            <!--checked : 요소를 선택된 상태로 표시-->
+            <!--name속성을 주면 중복체크없이 하나씩만 선택가능-->
+        </fieldset>
+        <fieldset>
+            <legend>토핑 선택</legend>
+            <label><input type="checkbox" name="level"> 베이컨</label><br><br>
+            <label><input type="checkbox" name="level"> 치즈</label><br><br>
+            <label><input type="checkbox" name="level"> 양파</label><br><br>
+            <label><input type="checkbox" name="level"> 버섯</label><br><br><!--선택-->
+            <!--checked : 요소를 선택된 상태로 표시-->
+        </fieldset>
+        <br>
+        희망배송시간 : <input type="time">
+        <br><br>
+        배송시 요청사항 : <textarea></textarea>
+        <!--readonly는 읽기전용이 됩니다.-->
+        <br><br>
+            <input type="submit" value="주문하기">
+    </form>
+</body>
+</html>
