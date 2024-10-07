@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select03</title>
+
+    <style>
+        /* 첫번째 자식 태그 */
+        p:first-child {
+            color: red;
+        }
+        /* 마지막 자식 태그 */
+        p:last-child {
+            color: blue;
+        }
+        /* n번째 자식태그(n) 
+        p:nth-child(3) {
+            color: green;
+        } */
+        /* n번째 특정 자식 태그  
+        p:nth-of-type(3) {
+            color: green;e[attribute]
+        } */
+         /* 짝수번째 자식 태그
+          짝수 : 2n, even
+          홀수 : 2n+1 , odd
+        */
+        p:nth-of-type(2n+1) {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <p>p4</p>
+        <p>p5</p>
+        <p>p6</p>
+    </div>
+
+    <div>
+        <p>p1</p>
+        <span>p2</span>
+        <p>p3</p>
+        <span>p4</span>
+        <p>p5</p>
+        <p>p6</p>
+    </div>
+
+    <div>
+        <p>p1</p>
+        <span>p2</span>
+        <span>p3</span>
+        <p>p4</p>
+        <p>p5</p>
+        <p>p6</p>
+    </div>
+</body>
+</html>
