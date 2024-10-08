@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prac1008-2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            
+            width: 200px;
+            height: 200px;
+            margin: 0;
+            
+        }
+
+        .red-box {
+            margin: 0;
+            background-color: red;
+        }
+
+        .green-box {
+            background-color: green;
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            z-index: 300;
+        }
+
+        .yellow-box {
+            background-color: yellow;
+            position: static;
+        }
+
+        .container1 {
+            background-color: lightgrey;
+            position: static;
+        }
+
+        .container2 {
+            width: 700px;
+            height: 600px;
+            margin: 50px;
+            border: 5px solid black;
+            position: relative;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="container1">
+            <h3>배경색이 lightgray<br>h3 글자</h3>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="box red-box">A</div>
+        <div class="box green-box">B</div>
+        <div class="box yellow-box">C</div>
+    </div>
+</body>
+</html>
