@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position02</title>
+    <style>
+
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+
+        .red-box {
+            background-color: red;
+            position: relative;
+            left: 100px;
+        }
+
+        .green-box {
+            background-color: green;
+            /* absolute는 절대적인 위치 */
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 300px; /* 더 큰숫자가 밖으로 나옴 */
+        }
+
+        .blue-box {
+            background-color: blue;
+            position: relative;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- class는 띄어쓰기로 여러개 사용가능 -->
+    <div class="box red-box"></div>
+    <div class="box green-box"></div>
+    <div class="box blue-box"></div>
+</body>
+</html>
