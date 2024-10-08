@@ -3,36 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>박스정렬</title>
     <style>
-        .box {
-            margin: 20px 15px;
-            border-width: 1px;
-            border-style: solid;
-            border-color: green;
-            padding: 10px 3px;
+        .green-box {
             width: 200px;
             height: 100px;
-            box-sizing: border-box; /* 콘텐츠박스 사이즈에 따라 자동으로 변함*/
-
+            border: 1px solid green;
             display: inline-block;
+            margin: 15px; /* 내부 */
+            /* padding: 10px 3px;  외부 */
+            box-sizing: border-box; /* 콘텐츠박스 사이즈에 따라 자동으로 변함*/
         }
-        span {
+        p {
             font-size: 24px;
-            font-weight: 800;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="box"> </div>
-    <div class="box"> </div>
-    <div class="box"> </div>
-    <div class="box"> </div>
-    <div class="box"> </div>
-    <div class="box"> </div>
-    <br>
-    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation. </span>
+    <h1>박스 정렬</h1>
+    <div class="green-box"> </div>
+    <div class="green-box"> </div>
+    <div class="green-box"> </div>
+    <div class="green-box"> </div>
+    <div class="green-box"> </div>
+    <div class="green-box"> </div>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse 
+        cillum dolore eu fugiat nulla pariatur.        
+    </p>
 </body>
 </html>
