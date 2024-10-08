@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>back01</title>
+    <style>
+
+        .back-img {
+            width: 600px;
+            height: 800px;
+            border: 1px solid red;
+
+            /* background-color: gray; */
+            background-image: url("../images/sample3.jpg");
+            /* background 반복여부 */
+            background-repeat: no-repeat;
+            /* 배경이미지의 크기지정 형식
+               auto:이미지크기유지
+               cover:가로세로비율유지 요소의 배경에 꽉채우기
+               contain:가로세로 비율을 유지하면서 이미지가 배경 요소안에 들어가도록 확대하거나 축소
+            background-size: contain; */
+            background-size: auto;
+            /* 위치 
+                x축방향: left, center, right
+                y축방향: top, center, bottom
+            */
+            background-position: center center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="back-img"></div>
+</body>
+</html>

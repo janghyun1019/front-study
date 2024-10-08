@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>back02</title>
+    <style>
+        body {
+            height: 4000px;
+        }
+        .content {
+            width: 400px;
+            height: 400px;
+
+            overflow: scroll;
+            /* 
+                해당 요소 공간을 넘치는 경우! 
+                hidden 숨김,
+                scroll 스크롤만들어 내릴수 있음
+            */
+
+            background-image: url(../images/sample3.jpg);
+
+            background-attachment: local;
+            /*
+                background-attachment 속성
+                local : 삽입된 이미지가 요소와 웹 브라우저에서 모두 스크롤
+                scroll : 삽입된 이미자가 요소에서는 고정되지만, 웹브라우저에서는 스크롤
+                fixed : 삽입된 이미지가 요소와 웹 브라우저에서 모두 고정
+            */
+            /* 
+                한꺼번에 사용가능
+                background: red url() no-repeat center/100% 100% fixed;
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+</body>
+</html>
