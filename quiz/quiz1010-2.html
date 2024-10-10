@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz1010-2</title>
+
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 600px;
+            margin: 0 auto;
+        }      
+
+        .container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .box-image {
+            width: 150px;
+            float: left;
+        }
+
+        .box {
+            background-color: lightgrey;
+            border: 1px solid black;
+            width: 300px;
+            float: left;
+        }
+
+        /* .container .box img {} <- 명확할때만 태그에 스타일을 준다 */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="../images/img1010.JPG" class="box-image">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda doloribus aliquam omnis, quas minima ratione non dolor cum inventore ipsam accusantium possimus sequi asperiores distinctio est cupiditate saepe iure dignissimos!</p>
+        </div>
+
+        <div class="box">
+            <img src="../images/img1010.JPG" class="box-image">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda doloribus aliquam omnis, quas minima ratione non dolor cum inventore ipsam accusantium possimus sequi asperiores distinctio est cupiditate saepe iure dignissimos!</p>
+        </div>
+    </div>     
+</body>
+</html>
