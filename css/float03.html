@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float03</title>
+    <style>
+
+        * {
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 600px;
+            height: 600px; 
+            margin: 0 auto; /* 가운데 정렬 */
+            /* 
+                div 세로는 내부요소 사이즈로 결정
+                or 절대 사이즈 지정
+                or 부모요소의 크기대비 %로 지정
+                or vh 단위 사용
+                내부요소가 생기는 크기만큼; 부모요소 대비이기 때문에 % 가능
+            */
+        }
+        .container::after {
+            /* height 지정이 안되도 height 사이즈 나옴 */
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .main {
+            width: 100%;
+            height: 400px;
+            background-color: mintcream;
+            float: left;
+        }
+
+        .top-left {
+            background-color: lightblue;
+            width: 50%;
+            height: 100px;
+            float: left;
+        }
+
+        .top-right {
+            background-color: lightpink;
+            width: 50%;
+            height: 100px;
+            float: left;
+        }
+
+        .bottom-left {
+            background-color: gray;
+            width: 30%;
+            height: 100px;
+            float: left;
+        }
+
+        .bottom-right {
+            background-color: lightgrey;
+            width: 70%;
+            height: 100px;
+            float: left;
+        }        
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="top-left"></div>
+        <div class="top-right"></div>
+        <div class="main"></div>
+        <div class="bottom-left"></div>
+        <div class="bottom-right"></div>
+    </div>
+
+</body>
+</html>
