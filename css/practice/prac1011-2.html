@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prac1011-2</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 700px;
+            border: 1px solid black;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+        .mainmenu, .mypage {
+            height: 100px;
+            background-color: red;
+        }
+
+        .mainmenu {
+            width: 200px;
+            
+        }
+        .mypage {
+            width: 100px;
+        }
+
+        .main {
+            display: flex;         
+        }
+
+        .box {
+            width: 100px;
+            height: 50px;
+            background-color: black;
+            margin: 50px;
+
+            display: flex;
+            justify-content: center; /* 주축 변경 */
+            align-items: center; /* 교차축 변경 */
+
+            transition-property: all;
+            transition-duration: 2s;
+
+        }
+
+        .box:hover {
+            transform: scale(1.5);
+        }
+
+        .main-contens {
+            display: flex;
+            flex-direction: row;
+            width: 70%;
+            height: 400px;
+            background-color: orange;
+
+            flex-wrap: wrap-reverse;
+
+            justify-content: space-between;
+
+            align-items: center;
+            align-content: center;
+        }
+
+        .aisde {
+            width:30%;
+            background-color: green;
+        }
+
+        .footer {
+            height: 100px;
+            background-color: blue;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="top">
+            <div class="mainmenu">메인메뉴</div>
+            <div class="mypage">마이페이지</div>
+        </div>
+        <div class="main">
+            <div class="main-contens">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="aisde">aisde</div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+    
+</body>
+</html>
