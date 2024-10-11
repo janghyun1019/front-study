@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz1011</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            background-color: lightgrey;
+            margin: 0 auto;
+        }
+
+        .container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        .red-box{
+            background-color: red;
+        }
+
+        .container:hover .red-box {
+            width: 400px;
+        }        
+
+        .blue-box{
+            background-color: blue;
+        }
+
+        .container:hover .blue-box {
+            background-color: purple;
+        }
+
+        .black-box{
+            background-color: black;
+            /* clear: both; */
+        }
+
+        .container:hover .black-box {
+            margin-left: 200px;          
+        }
+
+        .green-box{
+            background-color: green;
+            display: inline-block;
+        }
+
+        .green-box:hover {
+            background-color: green;
+            border: 5px solid red;
+            display: inline-block;
+        }
+
+        .orange-box{
+            background-color: orange;
+            display: inline-block;
+        }
+
+        .orange-box:hover {
+            background-color: orange;
+            border: 5px solid red;
+            display: inline-block;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box red-box"></div>
+        <div class="box blue-box"></div>
+        <div class="box black-box"></div>
+        <div class="box green-box">
+        </div><div class="box orange-box"></div>
+    </div>
+</body>
+</html>
