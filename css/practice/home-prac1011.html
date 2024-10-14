@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 700px;
+            border: 1px solid black;
+            clear: both;
+        }
+
+        .top {
+            height: 100px;
+            
+            display: flex;
+            justify-content:space-between;
+        }
+
+        .top-box1, .top-box2 {
+            background-color: red;
+            color: white;
+            height: 100px;
+
+            float: left;
+            display: flex;
+            align-items: center; /*폰트가로정렬*/
+            justify-content: center; /*폰트세로정렬*/
+
+        }
+
+        .top-box1 {
+            width: 200px;
+        }
+
+        .top-box2 {
+            width: 100px;
+        }
+
+        .main {
+            height: 300px;
+            display: flex;
+        }
+
+        .main-contents {
+            background-color: orange;
+            width: 490px;
+            display: flex;
+
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+        }
+
+        .blackbox {
+            background-color: black;
+            width: 100px;
+            height: 50px;
+            margin: 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            animation-name: ani-button;
+
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-play-state: paused;
+
+
+        }
+
+        .blackbox:hover {
+            animation-play-state: running;
+        }
+
+        @keyframes ani-button {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .aisde {
+            background-color: green;
+            width: 210px;
+            color: white;
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+        }
+
+        .footer {
+            background-color: blue;
+            color: white;
+            height: 100px;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="top">
+            <div class="top-box1">메인메뉴</div>
+            <div class="top-box2">마이페이지</div>
+        </div>
+        <div class="main">
+            <div class="main-contents">
+                <div class="blackbox"></div>
+                <div class="blackbox"></div>
+                <div class="blackbox"></div>
+                <div class="blackbox"></div>
+                <div class="blackbox"></div>
+                <div class="blackbox"></div>
+            </div>
+            <div class="aisde">aisde</div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+    
+</body>
+</html>

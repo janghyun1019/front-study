@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 1000px;
+            clear: both;
+        }
+
+        .top1 {
+            height: 40px;
+            background-color: #e5e5e5;
+            display: flex;
+            justify-content:space-between;
+        }
+
+        .top-box1 {
+            font-size: small;
+            color: #6c6c6c;
+            height: 40px;
+            padding: 0 20px 0 20px;
+
+            float: left;
+            display: flex;
+            align-items: center; /*폰트가로정렬*/
+            justify-content: center; /*폰트세로정렬*/
+
+        }
+
+        .top-box2 {
+            color: #6c6c6c;
+            height: 40px;
+            padding-right: 20px;
+
+            float: right;
+            display: flex;
+            align-items: center; /*폰트가로정렬*/
+            justify-content: center; /*폰트세로정렬*/
+
+        }
+
+        .top2 {
+            height: 80px;
+            background-color: #e5e5e5;
+            display: flex;
+        }
+
+        .logo {
+            width: 100px;
+            height: 80px;
+            background-color: white;
+        }
+        
+        .nav1 {
+            display: flex;
+        }
+
+        .main {
+            background-color: white;
+            /* height: 1000px; */
+
+        }
+
+        .main-contents1 {
+            background-color: lightgray;
+            width: 1000px;
+            height: 320px;
+
+        }
+
+        .main-contents2 {
+            background-color: lightpink;
+            width: 1000px;
+            height: 400px;
+
+        }
+
+        .main-contents3 {
+            background-color: lightblue;
+            width: 1000px;
+            height: 350px;
+
+        }
+
+        .main-contents4 {
+            background-color: lightgreen;
+            width: 1000px;
+            height: 300px;
+
+
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            color: #4f4f4f;
+            height: 100px;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="top1">
+            <div class="top-box1">
+                <div class="topsbox">롯데월드 어드벤처</div>
+                <div class="topsbox">롯데월드 어드벤처 부산</div>
+                <div class="topsbox">SEOUL SKY</div>
+                <div class="topsbox">롯데워터파크</div>
+                <div class="topsbox">롯데월드 아쿠아리움 하노이</div>
+            </div>
+            <div class="top-box2">
+                <select>
+                    <optgroup >
+                        <option>language</option>
+                        <options>USA</options>
+                        <option>Japan</option>
+                        <option>Spain</option>
+                    </optgroup>      
+                </select>
+            </div>
+        </div>
+        <div class="top2">
+            <div class="logo"></div>
+            <div class="nav1">
+                <div class="topmenubox">아쿠아리움 소개</div>
+                <div class="topmenubox">프로그램·이벤트</div>
+                <div class="topmenubox">이용안내</div>
+                <div class="topmenubox">온라인예매</div>
+                <div class="topmenubox">단체 안내</div>
+                <div class="topmenubox">고객소리함</div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-contents1">main-contents1</div>
+            <div class="main-contents2">main-contents2</div>
+            <div class="main-contents3">main-contents3</div>
+            <div class="main-contents4">main-contents4</div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+    
+</body>
+</html>
