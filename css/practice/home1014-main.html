@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-color: #F8F8F8;
+            border: 1px solid #d5d5d5;
+            clear: both;
+        }
+
+        .headerwrap {
+            
+            margin: 0 auto;
+            width: 960px;
+            height: 40px;
+            
+        }
+
+        .top1 {
+            width: 80%;
+            display: inline-block;
+        }
+
+        .top2 {
+            height: 40px;
+            align-items: center;
+            align-content: center;
+            float: right;
+        }
+
+        .tsbbox {
+            height: 40px;
+            font-size: small;
+            font-weight: bold;
+            color: #555555;
+            border: 1px solid #d5d5d5;
+            padding: 0 15px 0 15px;
+
+            align-content: center;
+            align-items: center; /*폰트가로정렬*/
+            
+            float: left;
+        }
+
+        .topsbox1:hover {
+            color: #b63638;
+        }
+        .topsbox2:hover {
+            color: #1f792d;
+        }
+        .topsbox3:hover {
+            color: #295f5f;
+        }
+        .topsbox4:hover {
+            color: #36429a;
+        }
+        .topsbox5:hover {
+            color: #2b39da;
+        }
+        
+        .header2 {
+            margin: 0 auto;
+            width: 960px;
+            height: 80px;
+            clear: both;
+        }
+        .topwrap {
+            align-content: center;
+        }
+        .logo {
+            color: #566e69;
+            font-size: 24px;
+            font-weight: bold;
+            width: 25%;
+            height: 80px;
+            align-content: center;
+            float: left;
+        }
+        .mainmenu {
+            width: 75%;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: row;
+        }
+        .menu-box {
+            display: inline-block;
+            height: 80px;
+            font-size: small;
+            font-weight: bold;
+            color: #555555;
+            border: 1px solid #d5d5d5;
+            padding: 0 20px 0 20px;
+
+            align-content: center;
+        }
+        .menu-box:hover {
+            color: #2b39da;
+        }
+
+        .main {
+            width: 100%;
+            background-color: #f1ffef;
+            height: 300px;
+        }
+        .maincon1 {
+            margin: 0 auto;
+            width: 960px;
+        }
+        .mainimg {
+            width: 960px;
+            background-color: #ffdfe4;
+            height: 270px;
+            opacity: 80%;
+        }
+        .imgarea {
+            height: 270px;
+            align-items: center;
+        }
+
+        .btnarea {
+            width: 160px;
+            height: 30px;
+            margin: 0 auto;
+
+            
+        }
+        .mainimgb {
+            float: left;
+            display: flex;
+            justify-content: flex-start;
+            justify-content: space-between;
+            color: #949494;
+        }
+        .mainimg-btn {
+            background-color: #64b69b;
+            border: 3px solid white;
+            font-size: small;
+            font-weight: bold;
+            width: 120px;
+            height: 35px;
+            color: white;
+            position: relative;
+            left: 20px;
+            bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            z-index: 10;
+        }
+        .mainimg-btn:hover {
+            background-color: white;
+            border: 3px solid #64b69b;
+            color: #64b69b;
+        }
+
+        .maincon2 {
+            background-color: #f0edf4;
+            width: 960;
+            height: 400px;
+            margin: 0 auto;
+        }
+        .maincon2-con {
+            margin: 0 auto;
+            width: 960px;
+        }
+        .maincon2-c1 {
+            background-color: #e0dff1;
+            width: 30%;
+            height: 400px;
+
+            float: left;
+
+        }
+        .maincon2-c2 {
+            background-color: #d4eeff;
+            width: 70%;
+            height: 400px;
+            display: inline-block;
+
+        }
+        .maincon2-c1-notice1 {
+            background-color: #c4c2dc;
+            display: flex;
+            font-size: 16px;
+            height: 35px;
+            padding-left: 10px;
+            align-items: center;
+            /* justify-content: center; */
+        }
+        .maincon2-c1-notice2 {
+            height: 70px;
+            padding-left: 10px;
+        }
+        .maincon2-c1-notice3-icon {
+            border: 1px solid #c4c2dc;
+            font-size: 12px;
+            width: 95px;
+            height: 95px;
+            float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .maincon2-c1-notice2 p {
+            font-size: 17px;
+        }
+        .maincon2-c1-notice2 span {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .maincon2-c2-c {
+            display: inline-block;
+            padding: 30px 0 0 60px;
+            width: 200px;
+
+        }
+        .maincon2-c2-c-img {
+            height: 200px;
+        }
+        .maincon2-c2-c-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .maincon2-c2-c-con p {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .maincon2-c2-c-con span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body> 
+    <div class="header">
+        <div class="headerwrap">
+            <div class="top1">
+                <div class="tsbbox topsbox1">롯데월드 어드벤처</div>
+                <div class="tsbbox topsbox2">롯데월드 어드벤처 부산</div>
+                <div class="tsbbox topsbox3">SEOUL SKY</div>
+                <div class="tsbbox topsbox4">롯데워터파크</div>
+                <div class="tsbbox topsbox5">롯데월드 아쿠아리움 하노이</div>
+            </div>
+            <div class="top2">
+                <select>
+                    <option selected disabled hidden>language</option>
+                    <option value="1">USA</option>
+                    <option value="2">Japan</option>
+                    <option value="3">Spain</option>
+                </select>
+            </div>
+        </div>        
+    </div>
+    <div class="header2">
+        <div class="topmwrap">
+            <div class="logo">LOGO</div>
+            <div class="mainmenu">
+                <div class="menu-box">아쿠아리움 소개</div>
+                <div class="menu-box">프로그램·이벤트</div>
+                <div class="menu-box">이용안내</div>
+                <div class="menu-box">온라인예매</div>
+                <div class="menu-box">단체 안내</div>
+                <div class="menu-box">고객소리함</div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="maincon1">
+            <div class="imgarea">
+                <div class="mainimg"></div>
+                <div class="mainimg-btn">자세히보기</div>
+            </div>
+            <div class="btnarea">
+                <div class="mainimgb">●</div>
+                <div class="mainimgb">●</div>
+                <div class="mainimgb">●</div>
+                <div class="mainimgb">●</div>
+                <div class="mainimgb">●</div>
+                <div class="mainimgb">●</div>
+                <div class="mainimgb">●</div>
+            </div>
+        </div>
+    </div>
+    <div class="maincon2">
+        <div class="maincon2-con">
+            <div class="maincon2-c1">
+                <div class="maincon2-c1-notice1">아쿠아리움 365</div>
+                <div class="maincon2-c1-notice2">
+                    <p>아쿠아리움 운영시간</p>
+                    <span><i class="fa-solid fa-clock"></i> 10:00~20:00</span>
+                </div>
+                <div class="maincon2-c1-notice3">
+                    <div class="maincon2-c1-notice3-icon">이용요금</div>
+                    <div class="maincon2-c1-notice3-icon">우대정보</div>
+                    <div class="maincon2-c1-notice3-icon">DIY 활동지</div>
+                    <div class="maincon2-c1-notice3-icon">층별안내</div>
+                    <div class="maincon2-c1-notice3-icon">단체프로그램</div>
+                    <div class="maincon2-c1-notice3-icon">고객의 소리</div>
+                    <div class="maincon2-c1-notice3-icon">교통·주차</div>
+                    <div class="maincon2-c1-notice3-icon">편의시설</div>
+                    <div class="maincon2-c1-notice3-icon">장애인편의제도</div>
+                </div>
+            </div>
+            <div class="maincon2-c2">
+                <div class="maincon2-c2-c">
+                    <div class="maincon2-c2-c-img">사진</div>
+                    <div class="maincon2-c2-c-con">
+                        <p>먹이주는 시간</p>
+                        <span>우리는 생명을 존중하고 함께하는 방법을 생각합니다.</span>
+                    </div>
+                </div>
+                <div class="maincon2-c2-c">
+                    <div class="maincon2-c2-c-img">사진</div>
+                    <div class="maincon2-c2-c-con">
+                        <p>먹이주는 시간</p>
+                        <span>우리는 생명을 존중하고 함께하는 방법을 생각합니다.</span>
+                    </div>
+                </div>
+                <div class="maincon2-c2-c">
+                    <div class="maincon2-c2-c-img">사진</div>
+                    <div class="maincon2-c2-c-con">
+                        <p>먹이주는 시간</p>
+                        <span>우리는 생명을 존중하고 함께하는 방법을 생각합니다.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="maincon3">
+        
+    </div>
+    <div class="main-notice">
+        <div class="main-notice-box">
+            
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>
