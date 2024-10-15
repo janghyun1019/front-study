@@ -1,0 +1,34 @@
+/* 공통 스타일 */
+
+/* 상단 네비게이션 바에 대한 스타일 */
+.nav {
+    height: 80px;
+    background-color: lightgray;
+}
+.nav p {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border: 1px solid black;
+}
+.navbar {
+    height: 80px;
+    background-color: aquamarine;
+}
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+.navbar a {
+    text-decoration: none;
+    color: #f18795;
+}
+.navbar li {
+    margin: 5px;
+    height: 65px;
+    width: 65px;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
