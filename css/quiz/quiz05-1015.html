@@ -6,97 +6,134 @@
     <title>Document</title>
 
     <style>
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        .container {
-            margin: 0 auto;
-            width: 800px;
 
+        .contaniner {
+            width: 800px;
+            margin: 0 auto;
+            border: 1px solid black;
         }
-        .blinebox {
-            border: 2px solid black;
-            height: 100px;
+        .top {
+            display: flex;
         }
-        .blinebox200 {
-            border: 2px solid black;
-            width: 300px;
-            height: 200px;
-        }
-        .top1-box1, .top1-box2 {
+        .topbox1 {
             width: 50%;
             height: 100px;
+            background-color: #c8e9ce;
         }
-        .top1-mbox1 {
-            display: flex;
+        .topbox2 {
+            width: 50%;
+            height: 100px;
+            background-color: #ebd6ff;
         }
-        .top1-box1 {
-            background-color: yellow;
-            display: inline-block;
-        }
-        .top1-box2 {
-            background-color: lightgray;
-            display: inline-block;
-        }
-        .top1-box3 {
-            background-color: purple;
+        .nav {
             width: 100%;
+            background-color: #c5f8ff;
+            height: 100px;
+        }
+        .main {
             display: flex;
+        }
+        .main1 {
+            width: 40%;
+            height: 200px;
+            background-color: #ffdfff;
+        }
+        .main2 {
+            width: 60%;
+        }
+        .main2-box1 {
+            height: 100px;
+            background-color: #fff9dd;
+        }
+        .main2-box2 {
+            height: 100px;
+            background-color: #eec3c3;
+        }
+        .footer {
+            display: flex;
+        }
+        .allftbox {
+            width: 25%;
+            height: 100px;
+        }
+        .footerbox1 {
+            background-color: #eec3c3;
+        }
+        .footerbox2 {
+            background-color: #d0ffef;
+        }
+        .footerbox3 {
+            background-color: aquamarine;
+        }
+        .footerbox4 {
+            background-color: #e5f7b3;
+        }
 
+        @media screen and (max-width:700px) {
+            .contaniner {
+                width: 100%;
+            }
         }
-        .top1-box4 {
-            background-color: lightblue;
+        @media screen and (max-width:650px) {
+            .footerbox1, .footerbox2, .footerbox3, .footerbox4 {
+                width: 50%;
+            }
+            .footer {
+                flex-wrap: wrap;
+            }
         }
-        .box5and6 {
-            width: 500px;
-        }
-        .top1-mbox3 {
-            display: inline-block;
-        }
-        .top1-box5 {
-            background-color: lightyellow;
-        }
-        .top1-box6 {
-            background-color: lightcoral;
-        }
-        .top1-box7 {
-            background-color: #9fac67;
-        }
-        .top1-box8 {
-            background-color: #ebc45b;
-        }
-        .top1-box9 {
-            background-color: #99e799;
+        @media screen and (max-width:500px) {
+            .topbox1, .topbox2 {
+                width: 100%;
+            }
+            .top {
+                flex-wrap: wrap;
+            }
+            .main1 {
+                width: 100%;
+                height: 100px;
+            }
+            .main2-box1, .main2-box2 {
+                width: 100%;
+            }
+            .main {
+                flex-direction: column;
+            }
         }
 
-</style>
+
+    </style>
 
 </head>
 <body>
-    <div class="container">
-        <div class="top1-mbox1">
-            <div class="blinebox top1-box1">
-            </div><div class="blinebox top1-box2">
+    
+    <div class="contaniner">
+        <div class="top">
+            <div class="topbox1"></div>
+            <div class="topbox2"></div>
+        </div>
+        <div class="nav"></div>
+        <div class="main">
+            <div class="main1"></div>
+            <div class="main2">
+                <div class="main2-box1"></div>
+                <div class="main2-box2"></div>
             </div>
         </div>
-        <div class="blinebox top1-box3"></div>
-        <div class="top1-mbox3">
-            <div class="blinebox200 top1-box4"></div>
-            <div class="box5and6">
-                <div class="blinebox top1-box5"></div>
-                <div class="blinebox top1-box6"></div>
-            </div>
+        <div class="footer">
+            <div class="allftbox footerbox1"></div>
+            <div class="allftbox footerbox2"></div>
+            <div class="allftbox footerbox3"></div>
+            <div class="allftbox footerbox4"></div>
         </div>
-        <div class="top1-mbox4">
-            <div class="blinebox top1-box7"></div>
-            <div class="blinebox top1-box8"></div>
-            <div class="blinebox top1-box9"></div>
-            <div class="blinebox top1-box10"></div>
-        </div>
-        
+
     </div>
+
 </body>
 </html>
