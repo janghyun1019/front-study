@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 5000px;
+            height: 5000px;
+        }
+
+        button {
+            position: fixed;
+            top: 100px;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>browser01.html</h1>
+    <button onclick="scrollInfo()">스크롤 위치 정보</button>
+
+    <script>
+        //js 영역
+        console.log(window.innerWidth);  //웹 브라우저 화면의 너비
+        console.log(window.innerHeight);  //웹 브라우저 화면의 높이
+        console.log(window.outerWidth);  //웹 브라우저 창의 너비
+        console.log(window.outerHeight);  //웹 브라우저 창의 높이
+        console.log(window.screenTop);  //웹 브라우저 위쪽 면과 모니터의 간격
+        console.log(window.screenY);  //웹 브라우저 왼쪽 면과 모니터의 간격
+        console.log(window.screenLeft);  //웹 브라우저의 수평 스크롤 위치
+        console.log(window.screenX);  
+        console.log(window.scrollX);  //웹 브라우저의 수직 스크롤 위치
+        console.log(window.scrollY);
+
+        function scrollInfo(){
+            console.log(window.scrollX);
+            console.log(window.scrollY);
+        }
+    </script>
+    
+</body>
+</html>
