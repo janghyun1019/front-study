@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding: 20px;
+        }
+
+        #main {
+            padding: 20px;
+            border: 1px solid #000;
+        }
+        #p1, #p2 {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="main">
+            <p id="p1">p1 텍스트</p>
+            <p id="p2">p2 텍스트</p>
+        </div>
+    </div>
+    <!-- 버튼 -->
+    <button onclick="changeMain()">main 배경색 gray로 변경</button>
+    <button onclick="resetMain()">main 배경색 white로 변경</button>
+    <button onclick="changeP1()">p1 글자색 red로 변경</button>
+    <button onclick="resetP1()">p1 글자색 black로 변경</button>
+    <button onclick="changeP2()">"p2 텍스트"를 "p2 글자" 로 변경</button>
+
+    <button onclick="toggleMain()">main 배경색 gray로 변경/해제</button>
+    <button onclick="toggleP1()">p1 글자색 red로 변경/해제</button>
+    <button onclick="cycleP2()">"p2 텍스트"를 순환 변경</button>
+
+    <script>
+        function changeMain() {
+          document.getElementById("main").style.backgroundColor = "gray";
+        }
+        
+        function resetMain() {
+          document.getElementById("main").style.backgroundColor = "white";
+        }
+        
+        function changeP1() {
+          document.getElementById("p1").style.color = "red";
+        }
+        
+        function resetP1() {
+          document.getElementById("p1").style.color = "black";
+        }
+        
+        function changeP2() {
+          document.getElementById("p2").textContent = "p2 글자";
+        }
+
+        let mainGray = false;
+        function toggleMain() {
+            const main = document.getElementById("main");
+            main.style.backgroundColor = mainGray ? "white" : "gray";
+            mainGray = !mainGray;
+        }
+
+        let p1Red = false;
+        function toggleP1() {
+            const p1 = document.getElementById("p1");
+            p1.style.color = p1Red ? "black" : "red";
+            p1Red = !p1Red;
+        }
+
+        const p2Texts = ["p2 텍스트", "p2 하나", "p2 둘", "p2 셋", "p2 넷"];
+        let p2Index = 0;
+        function cycleP2() {
+            const p2 = document.getElementById("p2");
+            p2Index = (p2Index + 1) % p2Texts.length;
+            p2.textContent = p2Texts[p2Index];
+        }
+    </script>
+</body>
+</html>

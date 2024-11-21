@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="loginForm">
+        <input type="text" id="loginId" placeholder="아이디"><br>
+        <input type="password" id="loginPw" placeholder="비밀번호"><br>
+        <button type="button" id="btnLogin" onclick="tryLogin()">로그인 시도</button><br>
+    </form>
+
+    <script>
+        //코드작성
+
+        const input_id = document.getElementById('loginId');
+        const input_pw = document.getElementById('loginPw');
+        const btnLogin = document.getElementById('btnLogin');
+
+
+        //로그인버튼 클릭 이벤트
+        function tryLogin(){
+            input_id.value = '';
+            input_pw.value = '';
+        }
+
+        input_id.addEventListener('keydown', (event)=>{
+            //console.log(event);
+
+            if(event.keyCode == 13){ //입력한 키가 엔터일 경우
+                input_pw.focus();
+            }
+        });
+
+        input_pw.addEventListener('keydown',(event)=>{
+            if(event.keyCode == 13){
+                //로그인 버튼 눌린것과 동일한 기능을 수행
+
+                //1))
+                // input_id.value = '';
+                // input_pw.value = '';
+
+                //2)
+                //tryLogin();
+
+                //3) 로그인 버튼 눌러버리기
+                btnLogin.click();  // 클릭효과!
+                //btnLogin.focus(); // 눌린 클릭효과 발생
+            }
+        });
+
+        
+
+
+
+
+
+        /*
+        // Option 1: 로그인 버튼 클릭 시 입력 필드 초기화
+        function clearFields() {
+            document.getElementById('loginId').value = '';
+            document.getElementById('loginPw').value = '';
+        }
+
+        // Option 2: 입력값 확인 및 메시지 출력
+        function tryLogin() {
+            const loginId = document.getElementById('loginId');
+            const loginPw = document.getElementById('loginPw');
+
+            if (!loginId.value) {
+                alert('아이디를 입력해주세요.');
+                loginId.focus();
+                return;
+            }
+
+            if (!loginPw.value) {
+                alert('비밀번호를 입력해주세요.');
+                loginPw.focus();
+                return;
+            }
+
+            alert('로그인 시도 완료');
+            clearFields();
+        }
+
+        // 키보드 입력 이벤트 처리
+        document.getElementById('loginId').addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                document.getElementById('loginPw').focus();
+            } else {
+                console.log(`Key pressed: ${event.key}`);
+            }
+        });
+
+        document.getElementById('loginPw').addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                tryLogin();
+            }
+        });
+        */
+    </script>
+</body>
+
+</html>
