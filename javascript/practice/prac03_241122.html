@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .like-container {
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .heart {
+            margin-right: 8px;
+        }
+
+        .count {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="like-container" id="likeButton">
+        <span class="heart">달식당 좋아요♡</span>
+        <span class="count" id="likeCount">0</span>
+    </div>
+
+    <script>
+
+        const likeButton = document.getElementById('likeButton');
+        const likeCount = document.getElementById('likeCount');
+
+        // 클릭 이벤트 추가
+        likeButton.addEventListener('click', () => {
+            // 현재 카운트 값을 가져오고 숫자로 변환
+            let count = parseInt(likeCount.textContent, 10);
+
+            // 카운트 증가
+            likeCount.textContent = count + 1;
+        });
+
+    </script>
+</body>
+</html>

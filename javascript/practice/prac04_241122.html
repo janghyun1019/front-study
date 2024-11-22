@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+            position: relative;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+        }
+
+        .ani1 {
+            animation-name: animation1;
+        }
+
+        .ani2 {
+            animation-name: animation2;
+        }
+
+        .ani3 {
+            animation-name: animation3;
+        }
+
+        @keyframes animation1 {
+            0% {
+                background-color: #92f1d2;
+                left: 0px;
+            }
+
+            50% {
+                background-color: #c1e0ee;
+                left: 100px;
+            }
+
+            100% {
+                background-color: #73e0a4;
+                left: 200px;
+            }
+        }
+
+        @keyframes animation2 {
+            0% {
+                background-color: #b4e6d2;
+                top: 0px;
+            }
+
+            50% {
+                background-color: #ebc0f8;
+                top: 100px;
+            }
+
+            100% {
+                background-color: #e2c6d2;
+                top: 200px;
+            }
+        }
+
+        @keyframes animation3 {
+            0% {
+                background-color: #ddf77f;
+                top: 0px;
+                left: 0px;
+            }
+
+            50% {
+                background-color: #74DAB4;
+                top: 100px;
+                left: 100px;
+            }
+
+            100% {
+                background-color: #b7a6d3;
+                top: 200px;
+                left: 200px;
+            }
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 컨트롤 버튼 -->
+    <button id="playButton">재생</button>
+    <button id="stopButton">정지</button>
+
+    <!-- 애니메이션 박스 -->
+    <div class="box ani1"></div>
+    <div class="box ani2"></div>
+    <div class="box ani3"></div>
+
+    <script>
+        const playButton = document.getElementById('playButton');
+        const stopButton = document.getElementById('stopButton');
+        const boxes = document.querySelectorAll('.box');
+
+        // 재생 버튼 클릭 시 모든 애니메이션 재생
+        playButton.addEventListener('click', () => {
+            boxes.forEach(box => {
+                box.style.animationPlayState = 'running';
+            });
+        });
+
+        // 정지 버튼 클릭 시 모든 애니메이션 멈춤
+        stopButton.addEventListener('click', () => {
+            boxes.forEach(box => {
+                box.style.animationPlayState = 'paused';
+            });
+        });
+    </script>
+</body>
+
+</html>
